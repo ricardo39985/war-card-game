@@ -18,6 +18,43 @@ const cards = [];
 let playerHand = [];
 let computerHand = [];
 createCards();
+dealCards();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// HELPERS
 function createCards() {
   ranks.forEach((rank) => {
     suits.forEach((suit) => {
@@ -50,13 +87,15 @@ function createCards() {
     });
   });
 }
-let randomIndex = () => Math.floor(Math.random() * cards.length);
-while (cards.length > 0) {
-  if (playerHand.length === 0) {
-    playerHand.push(cards.splice(randomIndex, 1));
-  }
-  playerHand < computerHand
-    ? playerHand.push(cards.splice(randomIndex, 1))
-    : computerHand.push(cards.splice(randomIndex, 1));
+function dealCards() {
+    let randomIndex = () => Math.floor(Math.random() * cards.length);
+    while (cards.length > 0) {
+        if (playerHand.length === 0) {
+            playerHand.push(cards.splice(randomIndex, 1));
+        }
+        playerHand < computerHand
+            ? playerHand.push(cards.splice(randomIndex, 1))
+            : computerHand.push(cards.splice(randomIndex, 1));
+    }
 }
-console.log(playerHand)
+
