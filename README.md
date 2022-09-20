@@ -45,8 +45,7 @@
 <br>
 
 ## :dart: About ##
-
-Describe your project
+TODO
 
 ## :sparkles: Features ##
 
