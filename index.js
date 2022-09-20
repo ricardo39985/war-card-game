@@ -20,40 +20,6 @@ let computerHand = [];
 createCards();
 dealCards();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // HELPERS
 function createCards() {
   ranks.forEach((rank) => {
@@ -67,20 +33,15 @@ function createCards() {
           break;
         case "Queen":
           newCard.value = 12;
-
           break;
         case "King":
           newCard.value = 13;
-
           break;
         case "Ace":
           newCard.value = 14;
-
           break;
-
         default:
           newCard.value = parseInt(rank);
-
           break;
       }
       cards.push(newCard);
@@ -88,14 +49,10 @@ function createCards() {
   });
 }
 function dealCards() {
-    let randomIndex = () => Math.floor(Math.random() * cards.length);
-    while (cards.length > 0) {
-        if (playerHand.length === 0) {
-            playerHand.push(cards.splice(randomIndex, 1));
-        }
-        playerHand < computerHand
-            ? playerHand.push(cards.splice(randomIndex, 1))
-            : computerHand.push(cards.splice(randomIndex, 1));
-    }
+  let randomIndex = () => Math.floor(Math.random() * cards.length);
+  while (cards.length > 0) {
+    playerHand.push(cards.splice(randomIndex, 1));
+    computerHand.push(cards.splice(randomIndex, 1));
+  }
 }
-
+console.log(computerHand.length);
