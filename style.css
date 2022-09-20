@@ -2,6 +2,9 @@ div {
   width: 50%;
   margin: auto;
 }
+body{
+  background-color: rgb(219, 216, 216);
+}
 .scores {
   height: auto;
   width: 90%;
@@ -27,16 +30,14 @@ div {
   text-align: center;
 }
 .table {
-  width: 50%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-items: center;
+  margin: auto;
+  display: flex;
 }
-.table div {
-  height: 260px;
-  width: 200px;
-  text-align: center;
-  outline: aqua dotted 2px;
+.table > div {
+  height: 460px;
+  width: 50%;
+  outline: rgb(136, 139, 139) solid 2px;
+  margin: 4px;
 }
 .play-button {
   width: 50%;
@@ -104,5 +105,12 @@ div {
   background-color: #f8f8f8;
 }
 #computer > h4 {
-  outline: solid 3px rgb(54, 94, 226);
+  outline: solid 7px rgb(54, 94, 226);
 }
+.message {
+  margin: auto;
+  text-align: center;
+  font-size: 60px;
+  color: rgb(87, 92, 90);
+}
+
