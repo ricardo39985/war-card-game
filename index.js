@@ -37,7 +37,10 @@ const tableSpaces = document.querySelector(".table").childNodes;
 const playerSpace = tableSpaces[1];
 const computerSpace = tableSpaces[3];
 const playButton = document.querySelector(".play-button div");
-const playerScoreEl =
+const playerScoreEl = document.querySelectorAll('h4')[0]
+const computerScoreEl = document.querySelectorAll('h4')[1]
+
+console.log(computerScoreEl)
 playButton.addEventListener("click", (e) => {
   pickRandomCard();
   const playerCard = players.player.lastCard
