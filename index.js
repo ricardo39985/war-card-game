@@ -15,40 +15,37 @@ const ranks = [
 ];
 const suits = ["c", "d", "h", "s"];
 const cards = [];
-const playerHand = [];
-const computerHand = [];
 
 const players = {
   user: {
     lastCardVal: 0,
-    handsWon: 0
+    handsWon: 0,
+    hand: [],
+    lastCard: {},
   },
   computer: {
     lastCardVal: 0,
-    handsWon: 0
+    handsWon: 0,
+    hand: [],
+    lastCard: {},
   },
 };
-createCards();
-dealCards();
+
+init();
 //CACHED ELEMENTS
 const tableSpaces = document.querySelector(".table").childNodes;
 const playerSpace = tableSpaces[1];
 const computerSpace = tableSpaces[3];
 const playButton = document.querySelector(".play-button div");
+const playerScoreEl =
 playButton.addEventListener("click", (e) => {
-  console.log(e.target);
-  computerSpace.setAttribute(
-    "class",
-    `card ${
-      pickRandomCard("user")[0].suit + pickRandomCard("computer")[0].face
-    }`
-  );
-  playerSpace.setAttribute(
-    "class",
-    `card ${pickRandomCard("user")[0].suit + pickRandomCard("user")[0].face}`
-  );
+  pickRandomCard();
+  const playerCard = players.player.lastCard
+  const computerCard = players.computer.lastCard
 
-  console.log(pickRandomCard("user")[0].suit + pickRandomCard("user")[0].face);
+  console.log(players.computer.lastCard)
+  computerSpace.setAttribute("class", `card ${computerCard.suit+computerCard.face}`);
+  playerSpace.setAttribute("class", `card ${playerCard.suit+playerCard.face}`);
 });
 
 // HELPERS
@@ -92,17 +89,25 @@ function createCards() {
 function dealCards() {
   let randomIndex = () => Math.floor(Math.random() * cards.length);
   while (cards.length > 0) {
-    computerHand.push(cards.splice(randomIndex(), 1));
-    playerHand.push(cards.splice(randomIndex(), 1));
+    players.user.hand.push(cards.splice(randomIndex(), 1)[0]);
+    players.computer.hand.push(cards.splice(randomIndex(), 1)[0]);
   }
 }
 
-function pickRandomCard(player) {
-  if (player === "user") {
-    return playerHand[Math.floor(Math.random() * playerHand.length)];
-  }
-  if (player === "computer") {
-    return computerHand[Math.floor(Math.random() * computerHand.length)];
-  }
+function pickRandomCard() {
+  players.user.lastCard =
+    players.user.hand[Math.floor(Math.random() * players.user.hand.length)];
+  players.computer.lastCard =
+    players.computer.hand[
+      Math.floor(Math.random() * players.computer.hand.length)
+    ];
 }
-console.log(playerHand);
+
+function isGameWon() {
+  return players.computer.hand.length == 0 || players.user.hand.length;
+}
+
+function init() {
+  createCards();
+  dealCards();
+}
