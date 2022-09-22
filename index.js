@@ -207,3 +207,5 @@ function pickRandomCard() {
 function isGameWon() {
   return players.computer.hand.length == 0 || players.user.hand.length;
 }
+
+
