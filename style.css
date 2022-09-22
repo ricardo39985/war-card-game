@@ -2,7 +2,7 @@ div {
   width: 50%;
   margin: auto;
 }
-body{
+body {
   background-color: rgb(219, 216, 216);
 }
 .scores {
@@ -36,10 +36,10 @@ body{
 .table > div {
   height: 460px;
   width: 50%;
-  outline: rgb(136, 139, 139) solid 2px;
+  outline: rgb(83, 206, 206) solid 2px;
   margin: 4px;
 }
-.play-button .reset-button{
+.play-button .reset-button {
   width: 50%;
   margin-top: 3px;
   height: 45px;
@@ -67,16 +67,14 @@ body{
   transform: scale(0.98);
   box-shadow: 4px 3px 23px 2px rgba(35, 81, 167, 0.24);
 }
-.reset-button div:hover{
+.reset-button div:hover {
   transform: scale(1.6);
-
 }
-.reset-button div:active{
+.reset-button div:active {
   transform: scale(0.98);
   box-shadow: 4px 3px 23px 2px rgba(35, 81, 167, 0.24);
-
 }
-.reset-button div{
+.reset-button div {
   margin-top: 18px;
   text-align: center;
   font-size: 30px;
@@ -136,9 +134,28 @@ body{
   color: rgb(87, 92, 90);
 }
 
-@media screen and (max-width: 600px) {
-  body {
-    color: blue;
+@media screen and (max-width: 900px) {
+  div {
+    width: 100%;
+  }
+  .reset-button div {
+    width: 50%;
   }
 }
-
+@media screen and (max-width: 600px) {
+  div {
+    width: 100%;
+  }
+  .reset-button div {
+    width: 84%;
+  }
+  .play-button div {
+    width: 76%;
+  }
+  .header h1 {
+    font-size: 60px;
+  }
+  .table > div {
+    height: 320px;
+  }
+}
