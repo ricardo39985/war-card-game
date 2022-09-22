@@ -30,8 +30,7 @@ const players = {
     lastCard: {},
   },
 };
-const table = [];
-init();
+let table = [];
 //CACHED ELEMENTS
 const tableSpaces = document.querySelector(".table").childNodes;
 const playerSpace = tableSpaces[1];
@@ -39,49 +38,110 @@ const computerSpace = tableSpaces[3];
 const playButton = document.querySelector(".play-button div");
 const playerScoreEl = document.querySelectorAll("h4")[0];
 const computerScoreEl = document.querySelectorAll("h4")[1];
+const messageEl = document.querySelectorAll(".message")[0];
+const resetButtonEl = document.querySelector(".reset-button div");
 
-console.log(computerScoreEl);
-playButton.addEventListener("click", (e) => {
+init();
+resetButtonEl.addEventListener("click", () => restart());
+playButton.addEventListener("click", handleClick);
+
+function init() {
+  createCards();
+  dealCards();
+}
+
+function restartGame() {
+  restart();
+}
+
+function restart() {
+  gameOverMessage();
+  resetVariables();
+  render();
+}
+
+function gameOverMessage() {
+  if (players.user.hand.length === players.computer.hand.length) {
+    messageEl.innerText = "Game is draw";
+  } else {
+    messageEl.innerText =
+      players.user.hand.length > players.computer.hand.length
+        ? "Game Over: Player Wins"
+        : "Game Over: Computer Wins";
+  }
+}
+
+function handleClick(e) {
   pickRandomCard();
-  const playerCard = players.user.lastCard;
-  const computerCard = players.computer.lastCard;
+  gameisWon() ? restartGame() : continueGame();
+}
+function continueGame() {
+  resolveWinner(players.user.lastCard, players.computer.lastCard);
+  render(players.computer.lastCard, players.user.lastCard);
+}
 
-  resolveWinner(playerCard, computerCard);
-  console.log(players.computer.lastCard);
-  render(computerCard, playerCard);
-});
+function gameisWon() {
+  return players.computer.hand.length === 0 || players.user.hand.length === 0;
+}
+
+function resetVariables(resetClicked) {
+  players.user.hand = [];
+  players.computer.hand = [];
+  players.computer.handsWon = 0;
+  players.user.handsWon = 0;
+  players.computer.lastCard = 0;
+  players.user.lastCard = 0;
+  players.computer.lastCard = {};
+  players.user.lastCard = {};
+  createCards();
+  dealCards();
+}
 
 function render(computerCard, playerCard) {
-  computerSpace.setAttribute(
-    "class",
-    `card ${computerCard.suit + computerCard.face}`
-  );
-  playerSpace.setAttribute(
-    "class",
-    `card ${playerCard.suit + playerCard.face}`
-  );
+  if (computerCard && !gameisWon()) {
+    computerSpace.setAttribute(
+      "class",
+      `card ${computerCard.suit + computerCard.face}`
+    );
+  } else {
+    computerSpace.setAttribute("class", `card joker-red`);
+  }
+  if (playerCard && !gameisWon()) {
+    playerSpace.setAttribute(
+      "class",
+      `card ${playerCard.suit + playerCard.face}`
+    );
+  } else {
+    playerSpace.setAttribute("class", `card joker-black`);
+  }
   computerScoreEl.innerText = players.computer.handsWon;
   playerScoreEl.innerText = players.user.handsWon;
 }
 
 function resolveWinner(playerCard, computerCard) {
-  // while (playerCard.value === computerCard.value) {
-  //   pickRandomCard();
-  // }
+  while (players.user.lastCard.value === players.computer.lastCard.value) {
+    setTimeout(()=>{
+      messageEl.innerText = "There has been a draw! Play again";
+
+    }, 3000)
+    pickRandomCard();
+  }
+
   playerCard.value > computerCard.value
     ? (players.user.handsWon += 1)
     : (players.computer.handsWon += 1);
   if (playerCard.value > computerCard.value) {
-    table.forEach((index) => {
-      players.user.hand.push(table.splice(index, 1)[0]);
+    table.forEach((card) => {
+      players.user.hand.push(card);
     });
-    document.querySelectorAll(".message")[0].innerText = "Player wins";
+    messageEl.innerText = "Player wins";
   } else {
-    table.forEach((index) => {
-      players.computer.hand.push(table.splice(index, 1)[0]);
+    table.forEach((card) => {
+      players.computer.hand.push(card);
     });
-    document.querySelectorAll(".message")[0].innerText = "Computer wins";
+    messageEl.innerText = "Computer wins";
   }
+  table = []
 }
 
 // HELPERS
@@ -139,16 +199,11 @@ function pickRandomCard() {
     Math.floor(Math.random() * players.computer.hand.length),
     1
   )[0];
-  table.push(pCard, cCard);
   players.user.lastCard = pCard;
   players.computer.lastCard = cCard;
+  table.push(pCard, cCard);
 }
 
 function isGameWon() {
   return players.computer.hand.length == 0 || players.user.hand.length;
-}
-
-function init() {
-  createCards();
-  dealCards();
 }
