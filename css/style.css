@@ -68,7 +68,7 @@ body {
   box-shadow: 4px 3px 23px 2px rgba(35, 81, 167, 0.24);
 }
 .reset-button div:hover {
-  transform: scale(1.6);
+  transform: scale(1.1);
 }
 .reset-button div:active {
   transform: scale(0.98);
