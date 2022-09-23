@@ -46,10 +46,18 @@
   💻 My Machine<br/><br/>
   <picture>
   <img src="https://img.shields.io/badge/Fedora-294172?style=for-the-badge&logo=fedora&logoColor=white" /> </picture>
+  <picture>
   <img src="https://img.shields.io/badge/intel-core%20i5%2010th-%230071C5.svg?&style=for-the-badge&logo=intel&logoColor=white" />
+  </picture>
+   <picture>
   <img src="https://img.shields.io/badge/RAM-16GB-%230071C5.svg?&style=for-the-badge&logoColor=white" />
+   </picture>
+<picture>
   <img src="https://img.shields.io/badge/AMD%20Radeon_RX_5500-ED1C24?style=for-the-badge&logo=amd&logoColor=white" />
+</picture>
+<picture>
   <img src=" https://img.shields.io/badge/dell-XPS%201%20-007DB8?style=for-the-badge&logo=dell&logoColor=white" />
+</picture>
 
 </p>
 
@@ -64,6 +72,7 @@
 </p>
 
 ## :dart: About
+
 <p>
 The goal is to be the first player to win all 52 cards<br>
 
@@ -78,7 +87,6 @@ If the cards are the same rank, it is War. Each player turns up one card face do
 HOW TO KEEP SCORE<br>
 The game ends when one player has won all the cards.</p>
 
-
 ## :sparkles: Features
 
 :heavy_check_mark: Javascript Event listeners\
@@ -86,7 +94,6 @@ The game ends when one player has won all the cards.</p>
 :heavy_check_mark: Points Tracking\
 :heavy_check_mark: Forefeit\
 :heavy_check_mark: Card rendering
-
 
 ## :rocket: Technologies
 
