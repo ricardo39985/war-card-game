@@ -119,6 +119,12 @@ $ cd web-game-project
 # Open index.html with your favorite browser
 ```
 
+## :fast_forward: Next Steps
+- [ ] More Styling
+- [ ] Animation
+- [ ] Name input
+- [ ] High Score Keeper
+
 ## :memo: License
 
 Copyright <2022> <Ricardo Persaud>
