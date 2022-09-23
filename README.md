@@ -8,13 +8,16 @@
   font-weight: 400;">War Card Game</h1>
 
 <p align="center">
-  <a href="#dart-about">About</a> &#xa0; | &#xa0;
-  <a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
-  <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
-  <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
-  <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
-  <a href="#memo-license">License</a> &#xa0; | &#xa0;
-  <a href="https://github.com/ricardo39985" target="_blank">Author</a>
+  <a href="#dart-screenshot">Screenshots</a> &#xa0; | &#xa0;
+
+<a href="#dart-about">About</a> &#xa0; | &#xa0;
+<a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
+<a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
+<a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
+<a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
+<a href="#memo-license">License</a> &#xa0; | &#xa0;
+<a href="https://github.com/ricardo39985" target="_blank">Author</a>
+
 </p>
 
 <p align='center'>
@@ -48,6 +51,13 @@
 
 <br>
 
+## :dart: Screenshot
+
+<p float="left" style="margin: auto; width: 90%">
+  <img src="images/screenshots/Screenshot_20220923-111922.jpg" width="200" />
+  <img src="images/screenshots/Screenshot_20220923-111906.jpg" width="200" />
+  <img src="images/screenshots/Screenshot_20220923-111922.jpg" width="200" />
+</p>
 ## :dart: About
 
 TODO
@@ -57,9 +67,7 @@ TODO
 :heavy_check_mark: Javascript Event listeners\
 :heavy_check_mark: CSS3 Styling\
 :heavy_check_mark: Points Tracking\
-:heavy_check_mark: Forefeit\
-
-
+:heavy_check_mark: Forefeit
 
 ## :rocket: Technologies
 
