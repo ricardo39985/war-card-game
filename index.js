@@ -46,8 +46,12 @@ resetButtonEl.addEventListener("click", () => restart());
 playButton.addEventListener("click", handleClick);
 
 function init() {
+
   createCards();
   dealCards();
+  playerSpace.setAttribute("class", `card joker-red`);
+  computerSpace.setAttribute("class", `card joker-black`);
+
 }
 
 function restartGame() {
@@ -117,16 +121,33 @@ function render(computerCard, playerCard) {
   computerScoreEl.innerText = players.computer.handsWon;
   playerScoreEl.innerText = players.user.handsWon;
 }
+function pickRandomCard() {
+  let pCard = players.user.hand.splice(
+    Math.floor(Math.random() * players.user.hand.length),
+    1
+  )[0];
+  let cCard = players.computer.hand.splice(
+    Math.floor(Math.random() * players.computer.hand.length),
+    1
+  )[0];
+  players.user.lastCard = pCard;
+  players.computer.lastCard = cCard;
+  table.push(pCard, cCard);
+}
 
-function resolveWinner(playerCard, computerCard) {
+function resolveWinner( ) {
   while (players.user.lastCard.value === players.computer.lastCard.value) {
-    setTimeout(()=>{
-      messageEl.innerText = "There has been a draw! Play again";
+      messageEl.innerText = "War Play again";
 
-    }, 3000)
-    pickRandomCard();
+    for (let index = 0; index < 3; index++) {
+      pickRandomCard();
+    }
   }
+  giveCardsToWinner(players.user.lastCard, players.computer.lastCard);
+  table = []
+}
 
+function giveCardsToWinner(playerCard,computerCard) {
   playerCard.value > computerCard.value
     ? (players.user.handsWon += 1)
     : (players.computer.handsWon += 1);
@@ -141,7 +162,6 @@ function resolveWinner(playerCard, computerCard) {
     });
     messageEl.innerText = "Computer wins";
   }
-  table = []
 }
 
 // HELPERS
@@ -190,19 +210,6 @@ function dealCards() {
   }
 }
 
-function pickRandomCard() {
-  let pCard = players.user.hand.splice(
-    Math.floor(Math.random() * players.user.hand.length),
-    1
-  )[0];
-  let cCard = players.computer.hand.splice(
-    Math.floor(Math.random() * players.computer.hand.length),
-    1
-  )[0];
-  players.user.lastCard = pCard;
-  players.computer.lastCard = cCard;
-  table.push(pCard, cCard);
-}
 
 function isGameWon() {
   return players.computer.hand.length == 0 || players.user.hand.length;
