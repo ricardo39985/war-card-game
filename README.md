@@ -83,7 +83,9 @@ The game ends when one player has won all the cards.</p>
 :heavy_check_mark: Javascript Event listeners\
 :heavy_check_mark: CSS3 Styling\
 :heavy_check_mark: Points Tracking\
-:heavy_check_mark: Forefeit
+:heavy_check_mark: Forefeit\
+:heavy_check_mark: Card rendering 
+
 
 ## :rocket: Technologies
 
