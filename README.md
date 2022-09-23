@@ -8,7 +8,7 @@
   font-weight: 400;">War Card Game</h1>
 
 <p align="center">
-  <a href="#dart-screenshot">Screenshots</a> &#xa0; | &#xa0;
+  <a href="#camer_flash-screenshot">Screenshots</a> &#xa0; | &#xa0;
 
 <a href="#dart-about">About</a> &#xa0; | &#xa0;
 <a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
@@ -17,6 +17,9 @@
 <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
 <a href="#memo-license">License</a> &#xa0; | &#xa0;
 <a href="https://github.com/ricardo39985" target="_blank">Author</a>
+
+<a href="https://ricardo39985.github.io/war-card-game/
+" target="_blank">Github Pages</a>
 
 </p>
 
@@ -51,7 +54,7 @@
 
 <br>
 
-## :dart: Screenshot
+## :camera_flash: Screenshot
 
 <p float="left" style="margin: auto; width: 90%">
   <img src="images/screenshots/Screenshot_20220923-111922.jpg" width="200" />
