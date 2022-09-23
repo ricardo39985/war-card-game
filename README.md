@@ -61,6 +61,7 @@
   <img src="images/screenshots/Screenshot_20220923-111906.jpg" width="200" />
   <img src="images/screenshots/Screenshot_20220923-111922.jpg" width="200" />
 </p>
+
 ## :dart: About
 <p>
 The goal is to be the first player to win all 52 cards<br>
