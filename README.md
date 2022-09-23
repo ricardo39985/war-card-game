@@ -1,11 +1,3 @@
-<div align="center" id="top">
-  <img style = "border-radius: 25px;   border:3px solid rgb(59, 218, 247)"src="images/screenshots/Screenshot from 2022-09-23 10-30-35.png" alt="Web Game Project" />
-
-&#xa0;
-
-  <!-- <a href="https://webgameproject.netlify.app">Demo</a> -->
-</div>
-
 <h1 align="center" style="
   text-align: center;
   font-size: 30px;
