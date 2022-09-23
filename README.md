@@ -84,7 +84,7 @@ The game ends when one player has won all the cards.</p>
 :heavy_check_mark: CSS3 Styling\
 :heavy_check_mark: Points Tracking\
 :heavy_check_mark: Forefeit\
-:heavy_check_mark: Card rendering 
+:heavy_check_mark: Card rendering
 
 
 ## :rocket: Technologies
@@ -103,7 +103,7 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) an
 
 ```bash
 # Clone this project
-$ git clone https://git.generalassemb.ly/ricardo1181/web-game.git
+$ git clone https://github.com/ricardo39985/war-card-game.git
 
 # Access
 $ cd web-game-project
