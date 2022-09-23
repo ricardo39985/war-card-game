@@ -120,7 +120,7 @@ $ cd web-game-project
 ```
 
 ## :fast_forward: Next Steps
-<p>Ice Box Features</p>
+<p>Ice Box Features</p><br>
 - [ ] More Styling
 - [ ] Animation
 - [ ] Name input
