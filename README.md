@@ -62,8 +62,20 @@
   <img src="images/screenshots/Screenshot_20220923-111922.jpg" width="200" />
 </p>
 ## :dart: About
+<p>
+The goal is to be the first player to win all 52 cards<br>
 
-TODO
+THE DEAL<br>
+The deck is divided evenly, with each player receiving 26 cards, dealt one at a time, face down. Anyone may deal first. Each player places their stack of cards face down, in front of them.<br>
+
+THE PLAY<br>
+Each player turns up a card at the same time and the player with the higher card takes both cards and puts them, face down, on the bottom of his stack.<br>
+
+If the cards are the same rank, it is War. Each player turns up one card face down and one card face up. The player with the higher cards takes both piles (six cards). If the turned-up cards are again the same rank, each player places another card face down and turns another card face up. The player with the higher card takes all 10 cards, and so on.<br>
+
+HOW TO KEEP SCORE<br>
+The game ends when one player has won all the cards.</p>
+
 
 ## :sparkles: Features
 
