@@ -37,11 +37,13 @@
 </p>
 
 <p align='center'>
-  💻 My workspace<br/><br/>
-  <img src="https://img.shields.io/badge/windows-%230078D6.svg?&style=for-the-badge&logo=windows&logoColor=white" />
+  💻 My Machine<br/><br/>
+  <img src="https://img.shields.io/badge/Fedora-294172?style=for-the-badge&logo=fedora&logoColor=white" />
   <img src="https://img.shields.io/badge/intel-core%20i5%2010th-%230071C5.svg?&style=for-the-badge&logo=intel&logoColor=white" />
   <img src="https://img.shields.io/badge/RAM-16GB-%230071C5.svg?&style=for-the-badge&logoColor=white" />
-  <img src="https://img.shields.io/badge/nvidia-gtx%201650-%2376B900.svg?&style=for-the-badge&logo=nvidia&logoColor=white" />
+  <img src="https://img.shields.io/badge/AMD%20Radeon_RX_5500-ED1C24?style=for-the-badge&logo=amd&logoColor=white" />
+  <img src=" https://img.shields.io/badge/dell-XPS%201%20-007DB8?style=for-the-badge&logo=dell&logoColor=white" />
+
 </p>
 
 <br>
@@ -52,9 +54,12 @@ TODO
 
 ## :sparkles: Features
 
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
+:heavy_check_mark: Javascript Event listeners
+:heavy_check_mark: CSS3 Styling
+:heavy_check_mark: Points Tracking
+:heavy_check_mark: Forefeit
+
+
 
 ## :rocket: Technologies
 
